@@ -11,7 +11,7 @@ This project has two folders:
   variables (p) into a smaller k (k<p) number of uncorrelated variables called principal components. _More info in: [PCA](https://rukshanpramoditha.medium.com/principal-component-analysis-18-questions-answered-4abd72041ccd)_
 
 To try any live monitoring, the script of the algorithm you choose has to be executed with for example: 
-`python3 live_monitoring_Random_Forest.py`. These scripts use the _ready_for_training.csv_, which is the dataset we used
+`python3 live_monitoring_Random_Forest.py`. These scripts use the `test_data/ready_for_training.csv`, which is the dataset we used
 to train our model.
 
 If you want to use a different dataset, this dataset should have a column with the url, and the type of url, for example:
