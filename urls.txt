@@ -1,4 +1,4 @@
 www.cr7.com -> Benign
 www.messi.com -> Benign
-bit.ly/3gmgkzl -> Phising
+http://bit.ly/3gmgkzl -> Phising
 http://www.pubyun.com/wiki/lib/exe/css.php?t=dokuwiki&tseed=f1f16e8c6142fab8553f2b9cfe045961 -> Malware
