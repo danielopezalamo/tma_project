@@ -1,5 +1,5 @@
 import pandas as pd
-import test_data.feature_engineering as fe
+import feature_engineering as fe
 
 df = pd.read_csv('../datasets/all.csv')
 

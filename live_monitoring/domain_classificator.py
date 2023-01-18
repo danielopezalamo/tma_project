@@ -1,12 +1,12 @@
 import pyshark
 
-pcap_path = './test_capture.pcapng'
+pcap_path = './test2.pcapng'
 
 # For reading PCAP file
 pcap = pyshark.FileCapture(pcap_path)
 
-pcap = pyshark.FileCapture(pcap_path, display_filter="dns")
+pcap = pyshark.FileCapture(pcap_path, display_filter="http")
 
 for packet in pcap:
-    print(packet.get_multiple_layers('DNS')[0])
+    print(packet.http.get_field('http.request.full_uri'))
     print('-----------------')

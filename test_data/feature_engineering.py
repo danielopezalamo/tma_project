@@ -155,5 +155,6 @@ def apply(df):
     #Length of Top Level Domain
     df['tld'] = df['url'].apply(lambda i: get_tld(i,fail_silently=True))
     df['tld_length'] = df['tld'].apply(lambda i: tld_length(i))
+    df.drop(['url'], axis=1, inplace=True)
 
     return df
