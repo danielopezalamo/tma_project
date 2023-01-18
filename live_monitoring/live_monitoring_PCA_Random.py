@@ -5,7 +5,10 @@ from scapy.layers.inet import IP
 import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.ensemble import RandomForestClassifier
-import test_data.feature_engineering as fe
+import sys
+sys.path.insert(0, '/home/mrrobot/TMA/tma_project/test_data/')
+import feature_engineering as fe
+
 
 pca = PCA(n_components=2)
 def tcp_ayikla(paket):
@@ -65,5 +68,3 @@ predictor = build_model()
 print("System has begun collecting...")
 
 sniff(filter='tcp', prn=tcp_ayikla)
-
-

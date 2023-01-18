@@ -131,29 +131,53 @@ def apply(df):
         except:
             return -1
     
+    
     df['use_of_ip'] = df['url'].apply(lambda i: having_ip_address(i))
+    
     df['abnormal_url'] = df['url'].apply(lambda i: abnormal_url(i))
+    
     df['google_index'] = df['url'].apply(lambda i: google_index(i))
+    
     df['count.'] = df['url'].apply(lambda i: count_dot(i))
+    
     df['count-www'] = df['url'].apply(lambda i: count_www(i))
+    
     df['count@'] = df['url'].apply(lambda i: count_atrate(i))
+    
     df['count_dir'] = df['url'].apply(lambda i: no_of_dir(i))
+    
     df['count_embed_domian'] = df['url'].apply(lambda i: no_of_embed(i))
+    
     df['short_url'] = df['url'].apply(lambda i: shortening_service(i))
-    df['count-https'] = df['url'].apply(lambda i : count_https(i))
-    df['count-http'] = df['url'].apply(lambda i : count_http(i))
+    
+    # df['count-https'] = df['url'].apply(lambda i : count_https(i))
+    
+    # df['count-http'] = df['url'].apply(lambda i : count_http(i))
+    
     df['count%'] = df['url'].apply(lambda i : count_per(i))
+    
     df['count?'] = df['url'].apply(lambda i: count_ques(i))
+    
     df['count-'] = df['url'].apply(lambda i: count_hyphen(i))
+    
     df['count='] = df['url'].apply(lambda i: count_equal(i))
+    
     df['url_length'] = df['url'].apply(lambda i: url_length(i))
+    
     df['hostname_length'] = df['url'].apply(lambda i: hostname_length(i))
+    
     df['sus_url'] = df['url'].apply(lambda i: suspicious_words(i))
+    
     df['count-digits']= df['url'].apply(lambda i: digit_count(i))
+    
     df['count-letters']= df['url'].apply(lambda i: letter_count(i))
+    
     df['fd_length'] = df['url'].apply(lambda i: fd_length(i))
+    
     #Length of Top Level Domain
+    
     df['tld'] = df['url'].apply(lambda i: get_tld(i,fail_silently=True))
+    
     df['tld_length'] = df['tld'].apply(lambda i: tld_length(i))
     df.drop(['url'], axis=1, inplace=True)
 
