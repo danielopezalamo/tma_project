@@ -39,7 +39,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report,confusion_matrix
 import sys
-sys.path.insert(0, '/home/mrrobot/TMA/tma_project/test_data/')
+sys.path.insert(0, 'C:/Users/danie/Desktop/tma_project/test_data')
 from feature_engineering import apply
 
 def tcp_ayikla(paket):
