@@ -3,7 +3,7 @@ from scapy.layers import http
 from scapy.layers.inet import IP
 # r = requests.get('http://stackoverflow.com') # first we try http
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
 import test_data.feature_engineering as fe
 
 
@@ -44,7 +44,7 @@ def build_model():
     info_csv = pd.read_csv('../test_data/ready_for_training.csv')
     y = info_csv['type']
     X = info_csv.drop('type', axis=1)
-    rfc = RandomForestClassifier(n_estimators=100)
+    rfc = KNeighborsClassifier(n_neighbors=15)
     rfc.fit(X, y)
     return rfc
 
